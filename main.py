@@ -1,7 +1,8 @@
 from ursina import Ursina, time
 from entities import Player, Enemy
-from systems import handle_input, handle_combat
+from systems import handle_input
 from utils import is_within_range
+from settings import ATTACK_RANGE, ATTACK_DAMAGE, ENEMY_DODGE_CHANCE
 
 def main():
     app = Ursina()
@@ -9,6 +10,10 @@ def main():
     # Создание игрока и противника
     player = Player()
     enemy = Enemy(target=player)
+
+    # Отладочный вывод
+    print("Игрок создан:", player)
+    print("Враг создан:", enemy)
 
     # Основной игровой цикл
     def update():
