@@ -1,5 +1,3 @@
-# weapon.py
-
 from ursina import Entity, color
 
 class Weapon(Entity):
