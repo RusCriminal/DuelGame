@@ -1,7 +1,7 @@
-from ursina import Entity, distance, invoke, color, time, application, Vec3
+import random
+from ursina import Entity, distance, color, time, application, Vec3, lerp
 from weapon import Weapon
 from settings import ENEMY_SPEED, ENEMY_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
-import random
 
 class Enemy(Entity):
     def __init__(self, target):
@@ -16,7 +16,7 @@ class Enemy(Entity):
         self.target = target
         self.weapon = Weapon(parent=self, color=color.magenta)
         self.is_attacking = False
-        self.dodge_chance = 0.2  # Шанс уклонения
+        self.dodge_chance = 0.3  # Шанс уклонения
 
     def update(self):
         self.move_towards_target()
