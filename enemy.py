@@ -1,6 +1,7 @@
 from ursina import Entity, distance, invoke, color, time, application, Vec3
 from weapon import Weapon
 from settings import ENEMY_SPEED, ENEMY_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
+import random
 
 class Enemy(Entity):
     def __init__(self, target):
