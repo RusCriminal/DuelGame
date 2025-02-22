@@ -6,7 +6,8 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 class Player(FirstPersonController):
     def __init__(self):
         super().__init__()
-        self.cursor.visible = False
+        self.cursor.visible = False  # Скрыть курсор
+        self.mouse_sensitivity = Vec2(40, 40)  # Чувствительность мыши
         self.gravity = 0.5
         self.jump_height = 1
         self.health = PLAYER_HEALTH
