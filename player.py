@@ -1,6 +1,4 @@
-# player.py
-
-from ursina import FirstPersonController, held_keys, distance, invoke
+from ursina import FirstPersonController, held_keys, distance, invoke, time, color, application
 from weapon import Weapon
 from settings import PLAYER_SPEED, PLAYER_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
 
