@@ -1,5 +1,3 @@
-# settings.py
-
 # Настройки игрока
 PLAYER_SPEED = 5
 PLAYER_HEALTH = 100
