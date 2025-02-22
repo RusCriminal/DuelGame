@@ -21,7 +21,7 @@ class Enemy(Entity):
     def update(self):
         self.move_towards_target()
         self.attack_target()
-        self.check_health()
+        self.check_health()  # Вызов метода проверки здоровья
 
     def move_towards_target(self):
         self.look_at(self.target.position)
@@ -38,6 +38,10 @@ class Enemy(Entity):
     def take_damage(self, damage):
         self.health -= damage
         print(f"Враг получил урон! Здоровье врага: {self.health}")
+        if self.health <= 0:
+            self.die()
+
+    def check_health(self):  # Добавленный метод
         if self.health <= 0:
             self.die()
 
