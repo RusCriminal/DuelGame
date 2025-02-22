@@ -9,7 +9,7 @@ class Enemy(Entity):
             model='cube',  # Модель врага
             color=color.red,  # Цвет врага
             scale=(1, 2, 1),  # Масштаб врага
-            position=(10, 1, 10),  # Позиция врага
+            position=(5, 1, 5),  # Позиция врага
             collider='box'  # Коллайдер для взаимодействий
         )
         self.health = ENEMY_HEALTH
