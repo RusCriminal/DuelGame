@@ -1,4 +1,4 @@
-from ursina import Entity, color, invoke
+from ursina import Entity, color, invoke, lerp
 
 class Weapon(Entity):
     def __init__(self, parent, color=color.blue):
