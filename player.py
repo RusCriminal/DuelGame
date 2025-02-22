@@ -1,4 +1,5 @@
-from ursina import FirstPersonController, held_keys, distance, invoke, time, color, application, Vec2
+from ursina.prefabs.first_person_controller import FirstPersonController
+from ursina import held_keys, distance, invoke, time, color, application, Vec2
 from weapon import Weapon
 from settings import PLAYER_SPEED, PLAYER_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
 
