@@ -1,7 +1,6 @@
-from ursina import  held_keys, distance, invoke, time, color, application
+from ursina import FirstPersonController, held_keys, distance, invoke, time, color, application, Vec2
 from weapon import Weapon
 from settings import PLAYER_SPEED, PLAYER_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
-from ursina.prefabs.first_person_controller import FirstPersonController
 
 class Player(FirstPersonController):
     def __init__(self):
