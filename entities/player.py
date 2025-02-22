@@ -1,4 +1,5 @@
-from ursina import FirstPersonController, Vec2, color
+from ursina.prefabs.first_person_controller import FirstPersonController
+from ursina import Vec2, color
 from entities.weapon import Weapon
 from settings import PLAYER_SPEED, PLAYER_HEALTH, PLAYER_JUMP_HEIGHT, PLAYER_GRAVITY
 
