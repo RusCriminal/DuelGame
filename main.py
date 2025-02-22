@@ -1,4 +1,4 @@
-from ursina import Ursina, time
+from ursina import Ursina, time, mouse
 from entities import Player, Enemy
 from systems import handle_input
 from utils import is_within_range
@@ -11,9 +11,8 @@ def main():
     player = Player()
     enemy = Enemy(target=player)
 
-    # Отладочный вывод
-    print("Игрок создан:", player)
-    print("Враг создан:", enemy)
+    # Блокировка мыши для управления камерой
+    mouse.locked = True
 
     # Основной игровой цикл
     def update():
