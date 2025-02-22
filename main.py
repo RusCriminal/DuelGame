@@ -1,6 +1,4 @@
-# main.py
-
-from ursina import Ursina, held_keys, mouse
+from ursina import Ursina, time
 from player import Player
 from enemy import Enemy
 
