@@ -1,6 +1,4 @@
-# enemy.py
-
-from ursina import Entity, distance, color, time
+from ursina import Entity, distance, color, time, application
 from weapon import Weapon
 from settings import ENEMY_SPEED, ENEMY_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
 
