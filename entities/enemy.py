@@ -6,11 +6,11 @@ from settings import ENEMY_SPEED, ENEMY_HEALTH, ENEMY_DODGE_CHANCE, ATTACK_RANGE
 class Enemy(Entity):
     def __init__(self, target):
         super().__init__(
-            model='cube',
-            color=color.red,
-            scale=(1, 2, 1),
-            position=(10, 1, 10),
-            collider='box'
+            model='cube',  # Модель врага
+            color=color.red,  # Цвет врага
+            scale=(1, 2, 1),  # Масштаб врага
+            position=(10, 1, 10),  # Позиция врага
+            collider='box'  # Коллайдер для взаимодействий
         )
         self.health = ENEMY_HEALTH
         self.target = target
@@ -21,7 +21,7 @@ class Enemy(Entity):
     def update(self):
         self.move_towards_target()
         self.attack_target()
-        self.check_health()  # Вызов метода проверки здоровья
+        self.check_health()
 
     def move_towards_target(self):
         self.look_at(self.target.position)
@@ -41,7 +41,7 @@ class Enemy(Entity):
         if self.health <= 0:
             self.die()
 
-    def check_health(self):  # Добавленный метод
+    def check_health(self):
         if self.health <= 0:
             self.die()
 
