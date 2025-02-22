@@ -19,6 +19,7 @@ class Enemy(Entity):
         self.dodge_chance = ENEMY_DODGE_CHANCE
 
     def update(self):
+        print("Враг обновляется")  # Отладочный вывод
         self.move_towards_target()
         self.attack_target()
         self.check_health()
