@@ -1,7 +1,7 @@
+from ursina import Entity, Vec2, Vec3, color, mouse, camera
 from ursina.prefabs.first_person_controller import FirstPersonController
-from ursina import Vec2, color
 from entities.weapon import Weapon
-from settings import PLAYER_SPEED, PLAYER_HEALTH, PLAYER_JUMP_HEIGHT, PLAYER_GRAVITY
+from settings import PLAYER_SPEED, PLAYER_HEALTH, PLAYER_JUMP_HEIGHT, PLAYER_GRAVITY, CAMERA_POSITION, CAMERA_SENSITIVITY
 
 class Player(FirstPersonController):
     def __init__(self):
