@@ -1,21 +1,21 @@
 from ursina import Ursina, time
-from player import Player
-from enemy import Enemy
+from entities.player import Player
+from entities.enemy import Enemy
+from systems.input_system import handle_input
 
-app = Ursina()
+def main():
+    app = Ursina()
 
-# Создание игрока и противника
-player = Player()
-enemy = Enemy(target=player)
+    # Создание игрока и противника
+    player = Player()
+    enemy = Enemy(target=player)
 
-# Обработка ввода игрока
-def input(key):
-    if key == 'left mouse down':
-        player.attack(enemy)
-    if key == 'right mouse down':
-        player.block()
-    if key == 'right mouse up':
-        player.stop_block()
+    # Основной игровой цикл
+    def update():
+        handle_input(player, enemy)
+        enemy.update()
 
-# Запуск игры
-app.run()
+    app.run()
+
+if __name__ == "__main__":
+    main()
