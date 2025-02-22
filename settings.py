@@ -3,6 +3,10 @@ WINDOW_WIDTH = 1152
 WINDOW_HEIGHT = 648
 WINDOW_TITLE = "Duel Game"
 
+# Настройки камеры
+CAMERA_POSITION = (0, 2, -5)  # Позиция камеры (вид от третьего лица)
+CAMERA_SENSITIVITY = (40, 40)  # Чувствительность мыши
+
 # Настройки игрока
 PLAYER_SPEED = 5
 PLAYER_HEALTH = 100
