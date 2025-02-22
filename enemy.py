@@ -1,4 +1,4 @@
-from ursina import Entity, distance, color, time, application
+from ursina import Entity, distance, color, time, application, Vec3
 from weapon import Weapon
 from settings import ENEMY_SPEED, ENEMY_HEALTH, ATTACK_RANGE, ATTACK_DAMAGE
 
@@ -15,6 +15,7 @@ class Enemy(Entity):
         self.target = target
         self.weapon = Weapon(parent=self, color=color.magenta)
         self.is_attacking = False
+        self.dodge_chance = 0.2  # Шанс уклонения
 
     def update(self):
         self.move_towards_target()
@@ -30,7 +31,8 @@ class Enemy(Entity):
             self.is_attacking = True
             self.weapon.attack()
             invoke(self.weapon.reset, delay=0.2)
-            self.target.take_damage(ATTACK_DAMAGE)
+            if random.random() > self.dodge_chance:  # Игрок может уклониться
+                self.target.take_damage(ATTACK_DAMAGE)
             self.is_attacking = False
 
     def take_damage(self, damage):
